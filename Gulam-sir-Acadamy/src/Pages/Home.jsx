@@ -1,7 +1,7 @@
 import "./Home.css";
 import founderImg from "../assets/founder.png"; // transparent PNG
 import { useEffect, useState } from "react";
-import { galleryImages } from "./ImportImg/GalleryImg.js";
+import { galleryImages } from "./ImportImgs/AcademyPictures.js";
 import { FiPhone } from "react-icons/fi"
 import { motion } from "framer-motion";
 import CareerPath from "../components/CareerPath.jsx";
