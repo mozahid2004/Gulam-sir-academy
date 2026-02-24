@@ -11,7 +11,7 @@ import {
   FiMessageCircle
 } from "react-icons/fi";
 import "./Navbar.css";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
