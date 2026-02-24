@@ -1,6 +1,6 @@
 import "./About.css";
 import { useEffect } from "react";
-import classroom from "../assets/GalleryImage/WhatsApp9.jpg";
+import classroom from "../assets/AcademyGallery/whatsapp9.jpg";
 import founder from "../assets/founder.png";
 import WhyChooseUs from "../components/WhyChooseUs.jsx";
 import FacultyTeam from "../components/FacultyTeam.jsx";
