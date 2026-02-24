@@ -316,7 +316,6 @@
 .reveal-left,
 .reveal-right {
   opacity: 1;
-  /* FIXED — visible by default */
   transition: transform .7s ease, opacity .7s ease;
   will-change: transform, opacity;
 }
@@ -408,15 +407,6 @@
     width: 100%;
   }
 
-  .dual-section::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #641722, transparent);
-  }
 }
 
 /* ================= CTA ================= */

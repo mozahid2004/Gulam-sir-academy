@@ -13,8 +13,8 @@
 /* HERO */
 .facilities-hero{
   height:35vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.25),
-  rgba(0, 0, 0, 0.15)),
+  background: linear-gradient(rgba(0, 0, 0, 0.45),
+  rgba(0, 0, 0, 0.65)),
 url("../assets/BgImage/facilities.png") center / cover no-repeat;
   display:flex;
   align-items:center;
@@ -25,7 +25,7 @@ url("../assets/BgImage/facilities.png") center / cover no-repeat;
 
 .hero-content{
   position:relative;
-  text-align:center;
+  text-align:center !important;
 }
 
 .hero-content h1{

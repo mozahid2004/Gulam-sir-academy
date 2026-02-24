@@ -37,22 +37,35 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, [typedText, isDeleting]);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".reveal-left, .reveal-right"
+    );
 
-  const elements = document.querySelectorAll(".reveal-left, .reveal-right");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal-active");
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            observerInstance.unobserve(entry.target); // animate only once
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
       }
+    );
+
+    elements.forEach((el) => {
+      el.classList.add("animate");
+      observer.observe(el);
     });
-  }, { threshold: 0.2 });
 
-  elements.forEach(el => {
-    el.classList.add("animate");
-    observer.observe(el);
-  });
-
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   return (
 
