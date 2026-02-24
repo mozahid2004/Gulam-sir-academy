@@ -1,0 +1,171 @@
+:root{
+  --primary:#7A1F2B;
+  --accent:#F2B705;
+}
+
+
+/* PAGE */
+.facilities-page{
+  font-family:"Poppins",sans-serif;
+}
+
+
+/* HERO */
+.facilities-hero{
+  height:35vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.25),
+  rgba(0, 0, 0, 0.15)),
+url("../assets/BgImage/facilities.png") center / cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  color:white;
+}
+
+.hero-content{
+  position:relative;
+  text-align:center;
+}
+
+.hero-content h1{
+  font-size:3rem;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+.hero-content p{
+  font-size:1.2rem;
+  opacity:.9;
+}
+
+
+/* GRID */
+.facilities-grid{
+  max-width:1200px;
+  margin:90px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+
+/* CARD */
+.facility-card{
+  background:#fff;
+  padding:40px 28px;
+  border-radius:18px;
+  position:relative;
+  overflow:hidden;
+  transition: all .3 ease;
+  border:1px solid #eee;
+}
+
+.facility-card:hover{
+  transform:scale(1.1);
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+  border-color:var(--primary);
+}
+
+
+/* TOP ICON */
+.card-icon{
+  font-size:30px;
+  color:var(--primary);
+  margin-bottom:18px;
+}
+
+
+/* TITLE */
+.facility-card h3{
+  font-size:1.3rem;
+  margin-bottom:12px;
+  color:var(--primary);
+}
+
+
+/* TEXT */
+.facility-card p{
+  color:#555;
+  line-height:1.6;
+  font-size:.95rem;
+}
+
+
+/* BACKGROUND ICON */
+.card-bg-icon{
+  position:absolute;
+  bottom:-15px;
+  right:-10px;
+  font-size:140px;
+  color:var(--primary);
+  opacity:.07;
+  pointer-events:none;
+}
+
+
+/* CTA */
+.facilities-cta{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.facilities-cta h2{
+  font-size:2.3rem;
+  margin-bottom:10px;
+}
+
+.facilities-cta p{
+  margin-bottom:25px;
+  font-style: italic;
+  opacity:.5;
+}
+
+.cta-btn{
+  background:var(--accent);
+  color:rgb(139, 13, 13);
+  padding:15px 34px;
+  border-radius:40px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.cta-btn:hover{
+  background:#d5a003;
+}
+
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .hero-content h1{
+    font-size:2.2rem;
+  }
+
+  .facility-card{
+    padding:30px 20px;
+  }
+
+}
+
+/*============================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .4s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* stagger animation */
+.facility-card:nth-child(1){transition-delay:.1s}
+.facility-card:nth-child(2){transition-delay:.2s}
+.facility-card:nth-child(3){transition-delay:.3s}
+.facility-card:nth-child(4){transition-delay:.4s}
+.facility-card:nth-child(5){transition-delay:.5s}
+.facility-card:nth-child(6){transition-delay:.6s}

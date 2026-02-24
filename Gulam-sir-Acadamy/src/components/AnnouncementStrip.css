@@ -1,0 +1,61 @@
+/* ===== WRAPPER ===== */
+.announcement-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #ff9933 0%,
+    #ffffff 50%,
+    #138808 100%
+  );
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ===== TRACK (MOVES) ===== */
+.announcement-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
+
+/* ===== STRIP ===== */
+.announcement-strip {
+  display: flex;
+}
+
+/* ===== ITEM ===== */
+.announcement-item {
+  white-space: nowrap;
+  padding: 12px 40px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom emphasis */
+.announcement-item.admission strong {
+  color: #0b3d91;
+}
+
+.announcement-item.scholarship strong {
+  color: #7a0000;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .announcement-item {
+    font-size: 13px;
+    padding: 10px 24px;
+  }
+}

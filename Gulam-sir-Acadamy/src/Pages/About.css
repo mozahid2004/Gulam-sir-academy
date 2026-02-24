@@ -1,0 +1,149 @@
+/* ================= ROOT ================= */
+.about-wrap {
+  background: #f8fafc;
+  color: #1f2933;
+}
+
+/* ================= HERO ================= */
+.about-hero-modern {
+  height: 35vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.65)),
+    url("../assets/BgImage/AboutImg.png") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* ================= SPLIT ================= */
+.about-split {
+  max-width: 1150px;
+  margin: 90px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ================= LEFT ================= */
+.about-left .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7a1f2b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-left h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.about-left p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+/* ================= RIGHT ================= */
+.about-right img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= FOUNDER ================= */
+.founder-modern {
+  max-width: 1150px;
+  margin: 100px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.founder-img img {
+  width: 50%;
+  border-radius: 22px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.14);
+}
+
+.founder-content .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7a1f2b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.founder-content h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.founder-content .quote {
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.founder-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* ================= REVEAL ================= */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+  .about-split,
+  .founder-modern {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-left,
+  .founder-content {
+    text-align: center;
+  }
+}
